@@ -1,13 +1,18 @@
 "use strict";
 
-const fullName = "Weronika Anna eee aaaaa Wdowiak";
+const fullName = "Weronika Anna Weronika Wdowiak";
 
-let space = fullName.split(" ");
-const firstName = space[0];
+const firstSpace = fullName.indexOf(" ");
+console.log(firstSpace);
+
+const lastSpace = fullName.lastIndexOf(" ");
+console.log(lastSpace);
+
+const firstName = fullName.slice(0, firstSpace + 1);
 console.log(firstName);
-const middleName = space[1];
-console.log(middleName);
-const lastName = space[2];
+const middleNames = fullName.slice(firstSpace + 1, lastSpace);
+console.log(middleNames);
+const lastName = fullName.slice(lastSpace + 1);
 console.log(lastName);
 
-console.log(`first:_${firstName}_${middleName}_${lastName}`);
+console.log(`first:_${firstName}_${middleNames}_${lastName}`);
